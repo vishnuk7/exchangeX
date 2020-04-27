@@ -3,6 +3,8 @@
   --color-1-dark: #7367f0;
   --color-1-light: #ce9ffc;
   --white: #fff;
+  --green: #27ae60;
+  --yellow: #f39c12;
   --font-family: "Lato", sans-serif;
   --box-shadow: 0px 5px 12px rgba(115, 106, 106, 0.44);
 }
@@ -73,12 +75,190 @@ body {
 
 .flags-arrow {
   font-size: 2rem;
+  margin: 0 1rem;
 }
 
 .input-form {
   margin-top: 1rem;
   width: 60vw;
-  height: 20vh;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
   box-shadow: var(--box-shadow);
   border-radius: 10px;
+}
+
+.input-1 {
+  appearance: none;
+  border: 0;
+  caret-color: var(--green);
+  color: var(--green);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.input-1:focus {
+  border-bottom: 1px solid var(--green);
+}
+
+.input-2 {
+  appearance: none;
+  border: 0;
+  caret-color: var(--yellow);
+  color: var(--yellow);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.input-2:focus {
+  border-bottom: 1px solid var(--yellow);
+}
+
+.dropdonws {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+}
+
+.autocomplete {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  font-size: 1rem;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.input-group {
+  position: relative;
+}
+
+.autocomplete p {
+  padding: 1rem 0;
+}
+
+.autocomplete p:hover {
+  background: var(--green);
+  color: var(--white);
+  width: 100%;
+  text-align: center;
+  /* padding: 0.5rem 0; */
+}
+
+.hide {
+  opacity: 0;
+  display: none;
+}
+
+.currenies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.currenies input {
+  appearance: none;
+  font-size: 1.5rem;
+  box-shadow: var(--box-shadow);
+  border: none;
+  border-radius: 10px;
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.circle {
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.circle:hover {
+  background: linear-gradient(
+    169.19deg,
+    var(--color-1-light) 0%,
+    var(--color-1-dark) 100%
+  );
+  transform: rotate(360deg);
+}
+
+.circle:hover .double-arrow {
+  stroke: var(--white);
+}
+
+.conversion {
+  background: linear-gradient(
+    169.19deg,
+    var(--color-1-light) 0%,
+    var(--color-1-dark) 100%
+  );
+  color: var(--white);
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.conversion .text {
+  font-size: 1.6rem;
+}
+
+.conversion .rate {
+  font-size: 2rem;
+}
+
+.go {
+  margin-top: 1rem;
+}
+
+.circle-go {
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.circle-go:hover .go-svg {
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.circle-go:hover .go-svg {
+  opacity: 0;
+}
+
+.go-text {
+  position: absolute;
+  opacity: 0;
+}
+
+.circle-go:hover .go-text {
+  color: var(--white);
+  position: absolute;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
+.circle-go:hover {
+  /* content: "Go !"; */
+  font-size: 1.5rem;
+  font-weight: 700;
+  /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+  background: var(--green);
 }
